@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Entre em contato com a Agência Diddy's. Preencha o formulário para enviar sua mensagem e fale com nossa equipe!">
+  <title>Entre em Contato - Agência Diddy's</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/contato.css">
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar section-content">
+      <a href="../index.html" class="nav-logo">
+        <h2 class="logo-text">DIDDY'S</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="../Sobre/sobrenos.html" class="nav-link">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a href="../Serviços/servicos.html" class="nav-link">Serviços</a>
+        </li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="contato">
+        <h3>Formulário de Contato</h3>
+        <form id="contactForm" class="form" method="post" action="php-ctt/email.php">
+          <input class="field" name="name" placeholder="Nome">
+          <input class="field" name="email" placeholder="E-mail">
+          <textarea class="field-msg" name="mensagem" placeholder="Digite sua mensagem aqui." rows="10"
+            cols="30"></textarea>
+          <div class="button-container-2">
+            <span class="mas">Enviar</span>
+            <button type="submit" name="submit" class="enviar-btn">ENVIAR</button>
+          </div>
+        </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>Desenvolvido com ❤️ por <a href="#">DIDDY'S</a></p>
+      <ul class="social-links">
+        <li><a href="https://www.facebook.com/profile.php?id=61550572768068"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/diddys_server/?igsh=MXJlbXI2OGthZ3R1Mg%3D%3D"><i
+              class="fab fa-instagram"></i></a></li>
+        <li><a href="https://x.com/diddysserver?s=21"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/@Diddy_S-f3w"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js-homepage/script.js"></script>
+  <script src="../Contato/php-ctt/email.php"></script>
+
+</body>
+
+</html>

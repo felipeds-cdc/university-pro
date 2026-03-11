@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja os projetos realizados pela Agência Diddy's. Explore nossos projetos de design, desenvolvimento web e mobile, com foco em inovação e usabilidade.">
+  <meta name="keywords" content="Projetos, Design Gráfico, Desenvolvimento Web, Desenvolvimento Mobile, Agência Web, Diddy's">
+  <meta name="author" content="Diddy's">
+  <title>Projetos - Agência Web Diddy's</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/projetos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar section-content">
+      <a href="../index.html" class="nav-logo">
+        <h2 class="logo-text">DIDDY'S</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="../Serviços/servicos.html" class="nav-link">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a href="../Contato/contato.html" class="nav-link">Contato</a>
+        </li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="filtro-projetos">
+      <button class="btn-filtro" data-category="all">Todos</button>
+      <button class="btn-filtro" data-category="web">Web</button>
+      <button class="btn-filtro" data-category="mobile">Mobile</button>
+      <button class="btn-filtro" data-category="design">Design</button>
+    </div>
+
+
+    <section class="projects-section">
+      <div class="section-content">
+        <h1 class="projects-title">Nossos Projetos</h1>
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up">
+            <img src="../img/misterio.webp" alt="Layout de Login - Projeto 1" class="project-image">
+            <div class="project-info">
+              <h3>Layout de Login</h3>
+              <p>Uma interface moderna e intuitiva para autenticação de usuários, com foco em simplicidade e segurança.</p>
+              <a href="projeto1.html" class="project-button">Ver mais</a>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up">
+            <img src="../img/misterio.webp" alt="Menu Hambúrguer - Projeto 2" class="project-image">
+            <div class="project-info">
+              <h3>Menu Hambúrguer</h3>
+              <p>Navegação compacta e funcional, perfeita para dispositivos móveis e design responsivo.</p>
+              <a href="projeto2.html" class="project-button">Ver mais</a>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up">
+            <img src="../img/misterio.webp" alt="Site Responsivo - Projeto 3" class="project-image">
+            <div class="project-info">
+              <h3>Site Responsivo</h3>
+              <p>Este é um site responsivo, desenvolvido para proporcionar uma excelente experiência de navegação em qualquer dispositivo, seja em desktop, tablet ou smartphone.</p>
+              <a href="projeto3.html" class="project-button">Ver mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js-homepage/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="projeto.js"></script>
+</body>
+</html>

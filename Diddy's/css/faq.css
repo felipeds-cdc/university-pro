@@ -1,0 +1,453 @@
+/* Estilo geral da página */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ font-family: "Poppins", serif;
+}
+
+
+:root {
+  /* Colors */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #1B1F23;
+  --secondary-color:#00FF99;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+  
+  /* Font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+  
+  /* Font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Border radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+  
+  /* Site max width */
+  --site-max-width: 1700px;
+}
+
+
+/*geral*/
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img{
+  width: 100%;
+}
+
+.section-content{
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: var(--site-max-width);
+}
+
+
+/*navbar*/
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background: var(--primary-color);
+}
+
+header .navbar{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text{
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar .nav-menu{
+  display: flex;
+  gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+  background-color: var(--secondary-color);
+  padding: 10px 18px;
+  color: var(--primary-color);
+  font-size: var(--font-size-m);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.navbar .nav-menu .nav-link:hover{
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+.navbar :where(#menu-close-button, #menu-open-button){
+  display: none;
+} 
+/* aqui não apaga*/
+
+      
+/* Container central */
+
+section {
+  width: 100%;
+  background-color: #1b1f23;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  /* Adiciona centralização do conteúdo */
+  text-align: center;
+}
+
+
+      /* Cabeçalho da seção */
+      h1 {
+        padding: 80px;
+        color: #00ff99;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease-out;
+      }
+
+      
+
+      /* Animação para o fade in */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Estilo para cada <details> */
+      details {
+        padding: 0 50vh;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Estilo do <summary> */
+      summary {
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 700px; /* Limita a largura máxima */
+        padding: 15px 20px; /* Espaçamento interno */
+        margin: 0 auto; /* Centraliza na página */
+        font-size: 1.2rem; /* Tamanho da fonte maior */
+        color: #fff; /* Cor do texto */
+        background-color: #1b1f23; /* Cor de fundo */
+        border: 2px solid #00ff99; /* Borda fina */
+        border-radius: 8px; /* Bordas arredondadas */
+        display: flex; /* Torna o conteúdo flexível */
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: space-between; /* Espaço entre texto e seta */
+        cursor: pointer; /* Muda o cursor para indicar interatividade */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+      }
+      
+      summary:hover {
+        background-color: #252525; /* Altera o fundo no hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Aprofunda a sombra */
+      }
+      
+      summary::after {
+        content: "▼"; /* Adiciona a seta */
+        font-size: 1.2rem; /* Tamanho da seta */
+        color: #00ff99; /* Cor da seta */
+        transition: transform 0.3s ease; /* Transição ao abrir/fechar */
+      }
+      
+      details[open] summary::after {
+        transform: rotate(-180deg); /* Gira a seta ao abrir */
+      }
+      
+    
+    /* Efeito de hover no <summary> */
+   
+
+      /* Estilo do parágrafo dentro de <details> */
+      p {
+        padding: 20px;
+        font-size: 1.1em;
+        color: #ccc;
+        background-color: #252525;
+        margin: 0;
+        border-top: 1px solid #444;
+        line-height: 1.7;
+        font-weight: 400;
+        text-align: justify;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Quando o <details> é aberto, o conteúdo do <p> se exibe */
+      details[open] p {
+        background-color: #1b1f23;
+      }
+
+      /* Estilo do ícone de fechar no <summary> */
+      summary::after {
+        content: "▼";
+        color: #00ff99;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+      }
+
+      /* Quando o <details> está aberto, inverter o ícone de fechar */
+      details[open] summary::after {
+        transform: rotate(180deg);
+      }
+
+      /* Efeito de transição ao abrir/fechar <details> */
+      details p {
+        display: none;
+      }
+
+      details[open] p {
+        display: block;
+      }
+
+      /* Estilo de foco no <summary> */
+      summary:focus {
+        outline: 3px solid #000000;
+        outline: none;
+      }
+
+      /* Ajuste de cursor para indicar que é interativo */
+      summary {
+        cursor: pointer;
+      }
+
+      /* Definições para o rodapé */
+      footer {
+        background-color: var(--dark-color);
+        padding: 20px 0;
+        color: var(--medium-gray-color);
+        text-align: center;
+        font-size: var(--font-size-s);
+      }
+      
+      footer .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      footer p {
+        margin: 0;
+        font-size: var(--font-size-m);
+      }
+      
+      footer a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: var(--font-weight-medium);
+      }
+      
+      footer a:hover {
+        text-decoration: underline;
+      }
+      
+      footer .social-links {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+      }
+      
+      footer .social-links li a {
+        color: var(--medium-gray-color);
+        font-size: 1.2em;
+        transition: color 0.3s;
+      }
+      
+      footer .social-links li a:hover {
+        color: var(--secondary-color);
+      }
+      
+
+
+
+/* aqui não apaga*/
+      /* parte da responsividade*/
+@media screen and (max-width: 1024px) {
+  .menu-section .menu-list{
+    gap: 60px;
+  }
+  .menu-section .menu-list .menu-item{
+    width: calc(100% / 3 - 60px);
+  }
+}
+
+/* parte da responsividade 900px*/
+  @media screen and (max-width: 900px) {
+    :root{
+      --font-size-m: 1rem;
+      --font-size-l: 1.3rem;
+      --font-size-xl: 1.5rem;
+      --font-size-xxl: 1.8rem;
+    }
+  
+    .navbar :where(#menu-close-button, #menu-open-button){
+      display: block;
+      font-size: var(--font-size-l);
+    }
+    
+    body.show-mobile-menu header::before{
+      content: "";
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(5px);
+      background: rgba(0, 0, 0, 0.2);
+    }
+  
+    .navbar #menu-close-button{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+  
+    .navbar #menu-open-button{
+      color: var(--white-color);
+      display: block;
+    }
+  
+    .navbar .nav-menu{
+      display: block;
+      position: fixed;
+      left: -300px;
+      top:0;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      background: var(--white-color);
+      transition: left 0.2s ease;
+    }
+  
+    body.show-mobile-menu .navbar .nav-menu{
+      left: 0;
+    }
+  
+    .navbar .nav-menu .nav-link{
+      color: var(--dark-color);
+      display: block;
+      margin-top: 17px;
+      font-size: var(--font-size-l);
+    }
+  
+    .hero-section .section-content{
+      flex-direction: column-reverse;
+      justify-content: center;
+      padding: 30px 20px 20px;
+      text-align: center;
+      gap: 50px;
+    }
+  
+    .hero-section .hero-details :is(.subtitle, .description) ,.about-section .about-details {
+      max-width: 100%;
+    }
+    
+    .hero-section .hero-details .buttons{
+      justify-content: center;
+    }
+  
+    .hero-section .hero-image-wrapper{
+      max-width: 270px;
+      margin-right: 0;
+    }
+
+    .about-section .section-content{
+      gap: 70px;
+      flex-direction: column;
+    }
+
+    .about-section .about-image-wrapper .about-image{
+      width: 100%;
+      height: 100%;
+      max-width: 250px;
+      aspect-ratio: 1;
+    }
+
+    .menu-section .menu-list{
+      gap: 30px;
+    }
+    .menu-section .menu-list .menu-item{
+      width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image{
+      max-width: 200px;
+    }
+  }
+
+  /* parte da responsividade 640px*/
+  @media screen and (max-width: 640px) {
+    .menu-section .menu-list{
+      gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item{
+      width: 100%;
+    }
+
+    .testimonials-section .slider-wrapper{
+      margin: 0 0 30px;
+    }
+
+    .testimonials-section .swiper-slide-button{
+      display: none;
+    }
+  }
